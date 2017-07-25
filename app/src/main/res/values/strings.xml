@@ -1,0 +1,32 @@
+<resources>
+    <string-array name="queries">
+        <item>Clear Selection</item>
+        <item>query_naive_eur</item>
+        <item>query_naive_afr</item>
+        <item>query_naive_eas</item>
+        <item>query_naive_amr</item>
+        <item>query_naive_all</item>
+    </string-array>
+
+    <string name="barcode_header_doctor">Please scan a medicine or a patient\'s QR code</string>
+    <string name="barcode_header_patient">Please scan a medicine barcode</string>
+
+    <!-- Name of app, shown when installing/uninstalling extension -->
+    <string name="app_name">Augmented Genomics</string>
+    <!-- Title of preference activity -->
+    <string name="preference_activity_title">Augmented Genomics Extension</string>
+    <!-- Name of extension, shown in preferences -->
+    <string name="extension_name">Augmented Genomics</string>
+    <!-- Text used on control layout -->
+    <string name="text_title_layout">Sample Text</string>
+    <!-- Text in -->
+    <string name="text_phone_to_smarteyeglass">TAU SmartEyeGlass</string>
+    
+        <!-- Configuration title shown in preferences -->
+    <string name="configuration_text">TAU Activity</string>
+
+    <!--Controller headers-->
+    <string name="header_waiting_connection">Login </string>
+
+    
+</resources>

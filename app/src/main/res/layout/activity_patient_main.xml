@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_patient_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/greenone"
+    tools:context="com.tau.application.PatientMain">
+
+
+    <ImageButton
+        android:id="@+id/button_barcode"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/buttonshape"
+        android:onClick="generateBarcode"
+        android:text="Generate Barcode"
+        android:textColor="#000000"
+        app:srcCompat="@mipmap/qrexample"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/line2"
+        android:layout_alignRight="@+id/line2"
+        android:layout_alignEnd="@+id/line2" />
+
+
+    <ImageButton
+        android:id="@+id/scanMed"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@null"
+        android:onClick="scanqR"
+        android:scaleType="fitXY"
+        android:text="Scan a medicine"
+        android:textColor="#000000"
+        app:srcCompat="@mipmap/barcode"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/line3"
+        android:layout_alignRight="@+id/line2"
+        android:layout_alignEnd="@+id/line2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/settingsButton"
+        android:background="@color/black"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/line1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/black"
+        android:id="@+id/line2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/button_barcode"
+        android:layout_marginTop="25dp"
+        android:background="@color/black"
+        android:id="@+id/line3" />
+
+
+    <TextView
+        android:id="@+id/patient_name_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Hello Patient"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patient_name_header"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="Please scan a medicine Barcode or generate a QR Code for your Doctor" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@null"
+        android:onClick="goToSettinngs"
+        android:scaleType="fitXY"
+        android:text="Genes settings"
+        android:textColor="@color/black"
+        app:srcCompat="@mipmap/gene"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@+id/line2"
+        android:layout_alignRight="@+id/line2"
+        android:layout_alignEnd="@+id/line2" />
+
+    <TextView
+        android:id="@+id/settingsDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/settingsButton"
+        android:layout_alignLeft="@+id/line2"
+        android:layout_alignStart="@+id/line2"
+        android:layout_below="@id/line1"
+        android:layout_toLeftOf="@+id/settingsButton"
+        android:layout_toStartOf="@+id/settingsButton"
+        android:gravity="center_vertical|start"
+        android:text="Access Control and VCF Settings"
+        android:textColor="@color/mouseGrey"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/barcodeDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line3"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/mouseGrey"
+        android:textSize="25sp"
+        android:layout_alignLeft="@+id/line2"
+        android:layout_alignStart="@+id/line2"
+        android:layout_alignTop="@+id/button_barcode"
+        android:layout_toLeftOf="@+id/button_barcode"
+        android:layout_toStartOf="@+id/button_barcode"
+        android:text="Barcode Generator" />
+
+    <TextView
+        android:id="@+id/scanDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/scanMed"
+        android:layout_alignLeft="@+id/line2"
+        android:layout_alignStart="@+id/line2"
+        android:layout_alignTop="@+id/scanMed"
+        android:layout_toLeftOf="@+id/scanMed"
+        android:layout_toStartOf="@+id/scanMed"
+        android:gravity="center_vertical|start"
+        android:text="Scan a Medicine"
+        android:textColor="@color/mouseGrey"
+        android:textSize="25sp" />
+
+
+</RelativeLayout>

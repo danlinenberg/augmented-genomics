@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/greenone"
+    tools:context="com.tau.application.MainActivity">
+
+    <Button
+        android:id="@+id/patient_login"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/buttonshape"
+        android:onClick="Login"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/edit_pass"
+        android:layout_alignLeft="@+id/edit_pass"
+        android:layout_alignStart="@+id/edit_pass" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/taupng"
+        android:layout_above="@+id/augmented"
+        android:layout_alignLeft="@+id/edit_id"
+        android:layout_alignStart="@+id/edit_id" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please login to proceed"
+        android:id="@+id/proceed"
+        android:textColor="@color/mouseGrey"
+        android:textSize="15sp"
+        style="@style/AudioFileInfoOverlayText"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:textSize="15sp"
+        android:background="@color/white"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:hint="Enter your ID"
+        android:inputType="number"
+        android:textColor="@color/mouseGrey"
+        android:textColorHint="@color/sweetGrey"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/proceed"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:id="@+id/edit_pass"
+        android:textSize="15sp"
+        android:layout_below="@+id/edit_id"
+        android:layout_alignLeft="@+id/edit_id"
+        android:layout_alignStart="@+id/edit_id"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/mouseGrey"
+        android:textColorHint="@color/sweetGrey"
+        android:hint="Password"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="&#169; DTD" />
+
+    <TextView
+        android:id="@+id/augmented"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:text="Augmented Genomics Project"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="19dp"
+        android:layout_above="@+id/proceed"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
