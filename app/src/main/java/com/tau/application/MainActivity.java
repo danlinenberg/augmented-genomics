@@ -63,7 +63,7 @@ public class  MainActivity extends Activity {
     public static CognitoCachingCredentialsProvider credentialsProvider;
     public static LambdaInterface lambdaInterface;
     public static LambdaInvokerFactory factory;
-    public static List<String> device_params = new ArrayList<>();
+    public static List<String> device_params;
 
     static SharedPreferences sharedPreferences;
 
@@ -71,6 +71,7 @@ public class  MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        device_params = new ArrayList<>();
         /**
          * Smarteyeglass start
          */

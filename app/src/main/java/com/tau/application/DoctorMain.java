@@ -174,6 +174,7 @@ public class DoctorMain extends AppCompatActivity {
                         }else{
                             doctor = new Doctor(activeSubstance, id);
                         }
+
                         runDrugQuery(doctor);
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -188,7 +189,7 @@ public class DoctorMain extends AppCompatActivity {
     }
 
     public void runDrugQuery(final Doctor doctor) {
-        Utils.showLoading(DoctorMain.this);
+        Utils.showLoading(this);
         new AsyncTask<Doctor, Void, String>() {
             @Override
             protected String doInBackground(Doctor... params) {
@@ -229,15 +230,11 @@ public class DoctorMain extends AppCompatActivity {
     public void runGeneQuery(Boolean isQrNull){
         Utils.showLoading(this);
         String localQR;
-        String spinnerChoice = spinner.getSelectedItem().toString();
-        if(spinnerChoice.contains("Clear")){
-            mQRText = null;
-            isQrNull = true;
-        }
         if(isQrNull){
-            localQR = "id=" + patientId + "&query=" + spinnerChoice + "&doctor=" + doctor_id;
+            localQR = "id=" + patientId + "&query=" + spinner.getSelectedItem().toString() + "&doctor=" + doctor_id;
         }else{
-            localQR = mQRText + "query=" + spinnerChoice  + "&doctor=" + doctor_id;
+            localQR = mQRText + "query=" + spinner.getSelectedItem().toString() + "&doctor=" + doctor_id;
+
         }
         Patient patient = new Patient(localQR);
         new AsyncTask<Patient, Void, String>() {
@@ -251,7 +248,8 @@ public class DoctorMain extends AppCompatActivity {
                     Utils.showBlankDialog(mContext, DoctorMain.this, "Error retrieving data", "Invalid ID or bad QR Code format",
                             "OK");
                     mQRText = null;
-                } catch (Exception e) {
+                } catch
+                        (Exception e) {
                     log("Failed to invoke lambda :" + e);
                     Utils.showBlankDialog(mContext, DoctorMain.this, "Error retrieving data", e.toString(),
                             "OK");

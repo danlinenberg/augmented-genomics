@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.view.View;
@@ -56,7 +55,7 @@ public class ManagePatients extends ListActivity implements MainInterface {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.manage_patients);
+        setContentView(R.layout.manage_petients);
         sharedPreferences = this.getSharedPreferences(Constants.SHARED_PREF, 0);
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");

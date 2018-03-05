@@ -5,11 +5,11 @@ package com.tau.application.Utils;
  */
 public class Constants {
 
-    public static final String TABLE_ID = "";
+    public static final String TABLE_ID = "eu-west-1:1aa90230-a0d9-42dc-bc59-ee9d7eb6f24b";
     public static final String LOG_TAG = "TAU_TAG";
-    public static final String CLIENT_ID = "Your API client id";
-    public static final String CLIENT_SECRET = "Your API client secret";
-    public static final String USER_POOL_ID = "Your user pool ID";
+    public static final String CLIENT_ID = "1u534h8alh3e3coidl92oe933b";
+    public static final String CLIENT_SECRET = "1r97jolr2ddoa53g4eu2d4mq201kcqa2o8nckscub8smr1bjfnu5";
+    public static final String USER_POOL_ID = "eu-west-1_utjwIFnOq";
     public static final String SHARED_PREF = "TauPrefs";
     public static final String BUCKET = "s3-tau-bucket-vcf";
 

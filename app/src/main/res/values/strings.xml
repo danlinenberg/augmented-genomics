@@ -1,6 +1,5 @@
 <resources>
     <string-array name="queries">
-        <item>Clear Selection</item>
         <item>query_naive_eur</item>
         <item>query_naive_afr</item>
         <item>query_naive_eas</item>
@@ -8,7 +7,7 @@
         <item>query_naive_all</item>
     </string-array>
 
-    <string name="barcode_header_doctor">Please scan a medicine or a patient\'s QR code</string>
+    <string name="barcode_header_doctor">Please scan a medicine barcode or a patient\'s QR code</string>
     <string name="barcode_header_patient">Please scan a medicine barcode</string>
 
     <!-- Name of app, shown when installing/uninstalling extension -->

@@ -37,10 +37,12 @@ public class BarcodeGenerator extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcode_generator);
         mContext = this;
+
+        QRcode = "";
+        preQRdata = new ArrayList<>();
 
         Utils.showLoading(this);
         getID();
